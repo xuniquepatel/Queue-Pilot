@@ -1,16 +1,17 @@
-# Distributed-Task-Scheduling-System
-A scalable, fault-tolerant, and concurrent task execution system built using **Python**, **Flask**, and **Redis**. This system dynamically distributes tasks across multiple worker nodes, ensures reprocessing on worker failure, and features a dashboard for real-time monitoring.
+# ✈️ QueuePilot  
+A scalable, fault-tolerant distributed task scheduling system powered by **Python**, **Flask**, and **Redis**.  
+QueuePilot dynamically distributes tasks across worker nodes, ensures automatic recovery from worker failures, and includes a real-time monitoring dashboard.  
 
 ---
 
 ## 🔧 Features
 
-- ✅ **Distributed Workers** – Run multiple workers in parallel to handle tasks.
-- ⟲ **Fault Tolerance** – Heartbeat-based health checks and auto-requeue of tasks if a worker fails.
-- ⚖️ **Load Balancing** – Tasks are assigned to the least loaded active worker using Redis queues.
-- 🔍 **Real-Time Dashboard** – Web interface to submit and monitor tasks across queues and workers.
-- 📦 **Queue Architecture** – Uses a dual-queue setup: a `task_queue` for pending tasks and `processing:*` queues per worker.
-- 🧠 **Monitor Node** – Requeues stuck tasks from failed workers.
+- ✅ **Distributed Workers** – Run multiple workers in parallel for high throughput.  
+- ⟲ **Fault Tolerance** – Heartbeat checks with auto-requeue on worker failure.  
+- ⚖️ **Load Balancing** – Tasks routed to the least loaded active worker.  
+- 🔍 **Real-Time Dashboard** – Monitor queues, workers, and task states.  
+- 📦 **Queue Architecture** – Redis-backed dual-queue design (`task_queue` + `processing:*`).  
+- 🧠 **Monitor Node** – Detects stale workers and reassigns their unfinished tasks.  
 
 ---
 
@@ -65,7 +66,7 @@ distributed-task-scheduling-system/
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/your-username/distributed-task-scheduling-system.git
+git clone https://github.com/xuniquepatel/queue-pilot.git
 cd distributed-task-scheduling-system/backend
 ```
 
@@ -117,10 +118,6 @@ Visit: `http://localhost:9090/dashboard.html`
 
 ---
 
-## 📊 Dashboard Screenshot
-
-
-
 ## 🌐 REST API Endpoints
 
 | Endpoint         | Method | Description                      |
@@ -150,17 +147,3 @@ Visit: `http://localhost:9090/dashboard.html`
 - RESTful logs & history endpoints
 
 ---
-
-## ✍️ Authors
-
-**Team 14 - IT559 Distributed Systems Project**  
-- Kahan Mehta (202411038)  
-- Unique Patel (202411013)  
-- Manav Rathod (202411057)  
-
----
-
-## 📚 License
-
-This project is intended for academic demonstration under IT559 Distributed Systems, Spring 2025.
-
