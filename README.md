@@ -66,7 +66,7 @@ distributed-task-scheduling-system/
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/xuniquepatel/queue-pilot.git
+git clone https://github.com/xuniquepatel/Queue-Pilot.git
 cd distributed-task-scheduling-system/backend
 ```
 
